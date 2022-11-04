@@ -1,0 +1,12 @@
+
+cloud:
+    aws:
+        s3:
+            bucket: aws.ssafybucket
+        credentials:
+            access-key: AKIAQ5M5GK3AHUM3WLNC
+            secret-key: 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
+        region:
+            static: ap-northeast-2
+        stack:
+            auto: false

@@ -1,0 +1,16 @@
+server:
+  port: 0    #���� ��Ʈ�� ����Ѵ�
+
+spring:
+  application:
+    name: user-service
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+  instance:
+    instance-id:  ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}
+    lease-renewal-interval-in-seconds: 1 #��Ʈ��Ʈ ���͹�
+    lease-expiration-duration-in-seconds: 2 # ��Ŀ������ ���� ��� ���� �ϱ� ���� ������ ��Ʈ��Ʈ�������� 2�� ��ٸ�
